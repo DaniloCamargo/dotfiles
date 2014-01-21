@@ -98,7 +98,7 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+#[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 [[ -s "$HOME/.bash_colors" ]] && . "$HOME/.bash_colors"
 
 ##########################
@@ -114,9 +114,9 @@ export CDPATH=$CDPATH:$HOME/workspace
 # Paths
 export PATH=./.bundle/binstubs:$PATH
 export PATH="/usr/local/heroku/bin:$PATH" # Heroku Toolbelt
-export PATH="$HOME/.pyenv/bin:$PATH" # pyenv
+#export PATH="$HOME/.pyenv/bin:$PATH" # pyenv
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+##PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 PATH=$PATH:$HOME/.composer # Add Composer to PATH
 
 USER_AT_HOST="\u@\h"
@@ -126,8 +126,8 @@ else
   WORKING_DIR="${BRIGHT_RED}\w${RESET}"
 fi
 
-RVM_GIT='($($rvm_bin_path/rvm-prompt)) $(__git_ps1 "[ %s ]")'
-export PS1="${USER_AT_HOST}:${WORKING_DIR} ${RVM_GIT}\n$ "
+#RVM_GIT='($($rvm_bin_path/rvm-prompt)) $(__git_ps1 "[ %s ]")'
+#export PS1="${USER_AT_HOST}:${WORKING_DIR} ${RVM_GIT}\n$ "
 
 # Set vi mode
 # set -o vi
@@ -135,4 +135,4 @@ export PS1="${USER_AT_HOST}:${WORKING_DIR} ${RVM_GIT}\n$ "
 alias espresso='~/The-M-Project_v1.4.0/Espresso/bin/espresso.js'
 
 # pyenv init to enable shims and autocompletion
-eval "$(pyenv init -)"
+#eval "$(pyenv init -)"
