@@ -112,12 +112,12 @@ export IRBRC=$HOME/.irbrc
 export CDPATH=$CDPATH:$HOME/workspace
 
 # Paths
-export PATH=./.bundle/binstubs:$PATH
-export PATH="/usr/local/heroku/bin:$PATH" # Heroku Toolbelt
-#export PATH="$HOME/.pyenv/bin:$PATH" # pyenv
-
-##PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-PATH=$PATH:$HOME/.composer # Add Composer to PATH
+export PATH="./.bundle/binstubs:$PATH"       # gems bins from local folder
+export PATH="$HOME/.rvm/bin:$PATH"           # rvm
+export PATH="$HOME/.composer:$PATH"          # composer
+export PATH="$HOME/.pyenv/bin:$PATH"         # pyenv
+export PATH="$HOME/.arc/arcanist/bin/:$PATH" # arcanist
+export PATH="/usr/local/heroku/bin:$PATH"    # Heroku Toolbelt
 
 USER_AT_HOST="\u@\h"
 if [[ $UID -ne 0 ]]; then
@@ -126,8 +126,9 @@ else
   WORKING_DIR="${BRIGHT_RED}\w${RESET}"
 fi
 
-#RVM_GIT='($($rvm_bin_path/rvm-prompt)) $(__git_ps1 "[ %s ]")'
-#export PS1="${USER_AT_HOST}:${WORKING_DIR} ${RVM_GIT}\n$ "
+# RVM_GIT='($($rvm_bin_path/rvm-prompt)) $(__git_ps1 "[ %s ]")'
+RVM_GIT='$(__git_ps1 "[ %s ]")'
+export PS1="${USER_AT_HOST}:${WORKING_DIR} ${RVM_GIT}\n$ "
 
 # Set vi mode
 # set -o vi
