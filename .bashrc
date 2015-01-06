@@ -113,6 +113,8 @@ export CDPATH=$CDPATH:$HOME/workspace
 
 # Paths
 export PATH="./.bundle/binstubs:$PATH"       # gems bins from local folder
+export PATH="./.bundle/bin:$PATH"            # gems bins from local folder
+export PATH="./node_modules/.bin:$PATH"      # node bins from local folder
 export PATH="$HOME/.rvm/bin:$PATH"           # rvm
 export PATH="$HOME/.composer:$PATH"          # composer
 export PATH="$HOME/.pyenv/bin:$PATH"         # pyenv

@@ -10,7 +10,7 @@
 [credential]
 	helper = cache
 [core]
-	excludesfile = /home/danilo/.gitignore
+	excludesfile = /home/omnis/.gitignore
 [push]
 	default = current
 [color]
