@@ -98,7 +98,7 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-#[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 [[ -s "$HOME/.bash_colors" ]] && . "$HOME/.bash_colors"
 
 ##########################
@@ -128,14 +128,16 @@ else
   WORKING_DIR="${BRIGHT_RED}\w${RESET}"
 fi
 
-# RVM_GIT='($($rvm_bin_path/rvm-prompt)) $(__git_ps1 "[ %s ]")'
-RVM_GIT='$(__git_ps1 "[ %s ]")'
+RVM_GIT='($($rvm_bin_path/rvm-prompt)) $(__git_ps1 "[ %s ]")'
 export PS1="${USER_AT_HOST}:${WORKING_DIR} ${RVM_GIT}\n$ "
 
 # Set vi mode
 # set -o vi
 
-alias espresso='~/The-M-Project_v1.4.0/Espresso/bin/espresso.js'
+# alias espresso='~/The-M-Project_v1.4.0/Espresso/bin/espresso.js'
 
 # pyenv init to enable shims and autocompletion
 #eval "$(pyenv init -)"
+
+export NVM_DIR="/home/omnis/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
